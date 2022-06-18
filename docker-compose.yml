@@ -39,15 +39,14 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     restart: on-failure
 
-phpmyadmin:
-        image: phpmyadmin/phpmyadmin
+  phpmyadmin:
         container_name: phpmyadmin
-        environment:
-         - PMA_ARBITRARY=1
-        restart: always
+        image: phpmyadmin
         ports:
-         - 8081:80
+         - "8082:80"
         environment:
-          PMA_HOST: mysql
-        networks:
-         - internal
+          MYSQL_ROOT_PASSWORD: phonebook_root
+          PMA_HOST: database
+          PMA_USER: phonebook
+          PMA_PASSWORD: phonebook
+      
