@@ -1,11 +1,14 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+
 <?php
-
-echo 'Hello Wovan!';
-
+$conn = mysqli_connect("database", "phonebook", "phonebook");
+if ($conn === false) {
+  die("Ошибка: " . mysqli_connect_error());
+} 
+echo "Подключение успешно установлено";
+mysqli_close($conn);
 ?>
-
-<div style="text-align: center">
-    <p>Поїхали!!!</p>
-   
-   
-</div>
+</head>
+</html>

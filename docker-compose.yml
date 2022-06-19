@@ -38,3 +38,15 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     restart: on-failure
+
+  phpmyadmin:
+        container_name: phpmyadmin
+        image: phpmyadmin
+        ports:
+         - "8082:80"
+        environment:
+          MYSQL_ROOT_PASSWORD: phonebook_root
+          PMA_HOST: database
+          PMA_USER: phonebook
+          PMA_PASSWORD: phonebook
+      
