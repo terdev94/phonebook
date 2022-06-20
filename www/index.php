@@ -2,6 +2,13 @@
 <head>
   <meta charset="UTF-8">
 
+  <form method="POST" name="input in sql table" action="/input.php">
+    Имя: <input type="text" name="name"><br><br>
+    Возраст: <input type="age" name="age"><br><br>
+    Описание: <input type="description" name="descrip"><br><br>
+    <input type="submit" name="recintable" value="Записать в таблицу">
+</form>
+
 <?php
 $conn = mysqli_connect("database", "phonebook", "phonebook","phonebook");
 if ($conn === false) {
@@ -15,5 +22,7 @@ if($conn->query($sql)){
 }*/
 mysqli_close($conn);
 ?>
+
+
 </head>
 </html>
