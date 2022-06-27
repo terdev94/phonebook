@@ -1,28 +1,15 @@
 <!doctype html>
 <head>
+
   <meta charset="UTF-8">
 
-  <form method="POST" name="input in sql table" action="/input.php">
-    Имя: <input type="text" name="name"><br><br>
-    Возраст: <input type="age" name="age"><br><br>
-    Описание: <input type="description" name="descrip"><br><br>
+  
+  <form method="POST" action="input.php">
+    Имя: <input type="text" name="namein"><br><br>
+    Возраст: <input type="number" name="age"><br><br>
+    Описание: <input type="text" name="descrip"><br><br>
     <input type="submit" name="recintable" value="Записать в таблицу">
-</form>
-
-<?php
-$conn = mysqli_connect("database", "phonebook", "phonebook","phonebook");
-if ($conn === false) {
-  die("Ошибка: " . mysqli_connect_error());
-} 
-/*$sql = "CREATE TABLE phonebook (id INTEGER AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30), age INTEGER, description VARCHAR(255));";
-if($conn->query($sql)){
-   echo "Таблица phonebook успешно создана";
-} else{
-    echo "Ошибка: " . $conn->error;
-}*/
-mysqli_close($conn);
-?>
-
-
-</head>
+    <button type="button" name="savedock" value="saveindock">Выгрузить в файл</button>
+  </form>
+  </head>
 </html>
