@@ -1,7 +1,15 @@
 <?php
 include('db.php');
-
-
+?>
+<!doctype html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Володина страничка</title>
+</head>
+  
+<body>
+    
+<?php
     $searchname = $_POST['searchname'];
     $searchage = $_POST['searchage'];
 
@@ -18,3 +26,5 @@ else{
 ?>
 
 <a href="index.php">Вернуться</a><br/><br/>
+
+</body>
