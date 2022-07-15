@@ -6,9 +6,6 @@ if (isset ($_POST["export"])){
     header('Content-Disposition: attachmentl; filename=data.csv');
     $output = fopen("php://output","w");
     fputcsv($output, array('ID','Name','Age','Description'));
-    //echo '<pre>';
-    //print_r($row);
-    //echo '</pre>';
     while ($row = mysqli_fetch_assoc($query))
     {
         fputcsv($output, $row);

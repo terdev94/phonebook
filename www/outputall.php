@@ -14,11 +14,10 @@ $sqlall = mysqli_query($conn,"SELECT * FROM `phonebook`");
 
 <br /><br />  
            <div class="container" style="width:900px;">  
-                <h2 align="center">Export Mysql Table Data to CSV file in PHP</h2>  
-                <h3 align="center">Employee Data</h3>                 
+                <h2 align="center">Эскпорт Mysql Table в CSV файл</h2>                 
                 <br />  
                 <form method="POST" action="export.php" align="center">  
-                     <input type="submit" name="export" value="CSV Export" class="btn btn-success" />  
+                     <input type="submit" name="export" value="CSV Вызгрузка" class="btn btn-success" />  
                 </form>  
                 <br />  
                 <div class="table-responsive" id="employee_table">  

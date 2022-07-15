@@ -9,8 +9,7 @@
     Имя: <input type="text" name="namein"><br><br>
     Возраст: <input type="number" name="age"><br><br>
     Описание: <input type="text" name="descrip"><br><br>
-    <input type="submit" name="recintable" value="Записать в таблицу">
-    <button type="button" name="savedock" value="saveindock">Выгрузить в файл</button><br><br>
+    <input type="submit" name="recintable" value="Записать в таблицу"><br><br>
   </form>
   <form method="POST" action="outputall.php">
   <input type="submit" name="alldb" value="Вывести список всех пользователей"><br><br>
